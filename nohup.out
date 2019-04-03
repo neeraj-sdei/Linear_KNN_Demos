@@ -67,3 +67,11 @@ RuntimeError: main thread is not in main loop
 127.0.0.1 - - [03/Apr/2019 14:31:45] "GET / HTTP/1.1" 200 -
 127.0.0.1 - - [03/Apr/2019 14:31:48] "GET /basketball HTTP/1.1" 200 -
 127.0.0.1 - - [03/Apr/2019 14:31:51] "GET /customer-basket HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "FlaskPlay.py", line 3, in <module>
+    import numpy as np
+ImportError: No module named numpy
+Traceback (most recent call last):
+  File "FlaskPlay.py", line 3, in <module>
+    import numpy as np
+ImportError: No module named numpy

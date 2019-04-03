@@ -11,7 +11,8 @@ classifier = pickle.load(classifier_f)
 classifier_f.close()
 app = Flask(__name__)
 port=str(8009)
-formUrl="http://localhost:"+port+"/points"
+host="http://35.165.235.204:"
+formUrl=host+port+"/points"
 
 @app.route('/basketball')
 def basketball():
@@ -19,8 +20,8 @@ def basketball():
 
 @app.route('/')
 def hello():
-    url1= "http://localhost:"+port+"/basketball"
-    url2= "http://localhost:"+port+"/customer-basket"
+    url1= host+port+"/basketball"
+    url2= host+port+"/customer-basket"
     return render_template("welcome.html",url1=url1, url2=url2)
 
 
@@ -43,4 +44,4 @@ def points():
     return "<h1>average points scored per game:</h1>"+predictedValue
 
 if __name__ == '__main__':
-   app.run(debug=True,port=8009)
+   app.run(host='0.0.0.0',debug=True,port=8009)

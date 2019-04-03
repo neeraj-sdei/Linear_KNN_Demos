@@ -1,0 +1,11 @@
+nohup: ignoring input
+ * Serving Flask app "FlaskPlay" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://0.0.0.0:8009/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 295-668-278
+203.190.154.146 - - [03/Apr/2019 11:39:40] "[37mGET /customer-basket HTTP/1.1[0m" 200 -
