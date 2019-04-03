@@ -10,7 +10,7 @@ classifier_f = open("basketbalLinear.pickle", "rb")
 classifier = pickle.load(classifier_f)
 classifier_f.close()
 app = Flask(__name__)
-port=str(8008)
+port=str(8009)
 formUrl="http://localhost:"+port+"/points"
 
 @app.route('/basketball')
@@ -43,4 +43,4 @@ def points():
     return "<h1>average points scored per game:</h1>"+predictedValue
 
 if __name__ == '__main__':
-   app.run(debug=True)
+   app.run(debug=True,port=8009)
