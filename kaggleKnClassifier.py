@@ -1,5 +1,5 @@
 import pickle
-import matplotlib.pyplot as plt, mpld3
+import matplotlib.pyplot as plt
 import pandas as pd
 import io
 import base64
