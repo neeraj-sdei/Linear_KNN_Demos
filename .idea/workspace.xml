@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f3e7ba9f-6fb7-4095-a7aa-24c4532906e9" name="Default Changelist" comment="" />
+    <list default="true" id="f3e7ba9f-6fb7-4095-a7aa-24c4532906e9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FlaskPlay.py" beforeDir="false" afterPath="$PROJECT_DIR$/FlaskPlay.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/FlaskPlay.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="57" column="20" lean-forward="true" selection-start-line="57" selection-start-column="20" selection-end-line="57" selection-end-column="20" />
+            <state relative-caret-position="225">
+              <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -82,6 +85,7 @@
       <find>ml-100k/</find>
       <find>merge</find>
       <find>movie ti</find>
+      <find>tc</find>
     </findStrings>
     <replaceStrings>
       <replace>number</replace>
@@ -319,7 +323,7 @@
     <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19092332" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19092332" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -537,8 +541,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/FlaskPlay.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="57" column="20" lean-forward="true" selection-start-line="57" selection-start-column="20" selection-end-line="57" selection-end-column="20" />
+        <state relative-caret-position="225">
+          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>

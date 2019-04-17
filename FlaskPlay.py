@@ -15,8 +15,8 @@ classifier = pickle.load(classifier_f)
 classifier_f.close()
 app = Flask(__name__)
 port=str(8009)
-#host="http://35.165.235.204:"
-host="http://0.0.0.0:"
+host="http://35.165.235.204:"
+#host="http://0.0.0.0:"
 formUrl=host+port+"/points"
 
 model = tc.load_model("recommend_movies")
