@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block body %}
+Recommendations for user id :{{user_id}}
+  <ul>
+  {% for movie in movies %}
+    <li>{{ movie.movie_title }}</li>
+  {% endfor %}
+  </ul>
+{% endblock %}
+</body>
+</html>
