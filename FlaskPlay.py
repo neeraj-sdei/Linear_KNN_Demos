@@ -6,8 +6,10 @@ from flask import Flask, render_template, request,jsonify
 from kaggleKnClassifier import KaggleCustomerBasket as kg
 import turicreate as tc
 from jinja2 import Environment, PackageLoader, select_autoescape, FileSystemLoader
+
+print(os.path.dirname(__file__))
 env = Environment(
-    loader=FileSystemLoader('%s/templates/' % os.path.dirname(__file__)),
+    loader=PackageLoader(__name__, 'templates'),
     autoescape=select_autoescape(['html', 'xml'])
 )
 classifier_f = open("basketbalLinear.pickle", "rb")
