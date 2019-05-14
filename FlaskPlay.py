@@ -1,11 +1,11 @@
 import os
 import pickle
-
 import numpy as np
 from flask import Flask, render_template, request,jsonify
 from kaggleKnClassifier import KaggleCustomerBasket as kg
 import turicreate as tc
 from jinja2 import Environment, PackageLoader, select_autoescape, FileSystemLoader
+from DamageDetection import DamageDetection as dmg
 
 print(os.path.dirname(__file__))
 env = Environment(
@@ -66,6 +66,17 @@ def recommendations(num):
 #     return render_template("countingpeople.html",vid=frame)
 
 
+@app.route('/image',methods = ['POST'])
+def damagedetect():
+
+    content = request.get_json(silent=True)
+    print(content['img'])
+
+    graph1_url=dmg().Process(content['img'])
+
+    return render_template("graphfile.html")
+
+
 
 @app.route('/points',methods = ['POST'])
 def points():
@@ -81,3 +92,5 @@ def points():
 
 if __name__ == '__main__':
    app.run(host='0.0.0.0',debug=True,port=8009)
+   # dmg().Process('image2.jpg')
+
