@@ -16,7 +16,7 @@ classifier_f = open("basketbalLinear.pickle", "rb")
 classifier = pickle.load(classifier_f)
 classifier_f.close()
 app = Flask(__name__)
-port=str(8009)
+port=str(8007)
 host="http://35.165.235.204:"
 #host="http://0.0.0.0:"
 formUrl=host+port+"/points"
@@ -73,8 +73,9 @@ def damagedetect():
     print(content['img'])
 
     graph1_url=dmg().Process(content['img'])
+    response={"img":graph1_url}
 
-    return render_template("graphfile.html")
+    return jsonify(response)
 
 
 
@@ -91,6 +92,6 @@ def points():
     return "<h1>average points scored per game:</h1>"+predictedValue
 
 if __name__ == '__main__':
-   app.run(host='0.0.0.0',debug=True,port=8009)
+   app.run(host='0.0.0.0',debug=True,port=8007)
    # dmg().Process('image2.jpg')
 

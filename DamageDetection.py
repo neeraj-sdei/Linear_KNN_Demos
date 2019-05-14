@@ -117,7 +117,8 @@ class DamageDetection:
             graph_url = base64.b64encode(img.getvalue()).decode()
             #plt.show(image_np)
             print("Confidence = ", output_dict["detection_scores"].max())
-            return 'data:image/png;base64,{}'.format(graph_url)
+            #return 'data:image/png;base64,{}'.format(graph_url)
+            return graph_url
 
 
 
