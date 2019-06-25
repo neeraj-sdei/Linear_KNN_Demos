@@ -15,11 +15,17 @@ env = Environment(
 classifier_f = open("basketbalLinear.pickle", "rb")
 classifier = pickle.load(classifier_f)
 classifier_f.close()
+
+classifier_m = open("mobile_price_knn.pickle", "rb")
+classifier_mobile = pickle.load(classifier_m)
+classifier_m.close()
+
 app = Flask(__name__)
 port=str(8007)
 host="http://35.165.235.204:"
 #host="http://0.0.0.0:"
 formUrl=host+port+"/points"
+formUrlMobile=host+port+"/result"
 
 model = tc.load_model("recommend_movies")
 
@@ -33,7 +39,35 @@ def hello():
     url1= host+port+"/basketball"
     url2= host+port+"/customer-basket"
     url3= host+port+"/recommend"
-    return render_template("welcome.html",url1=url1, url2=url2,url3=url3)
+    url4= host+port+"/mobile"
+    return render_template("welcome.html",url1=url1, url2=url2,url3=url3,url4=url4)
+
+
+@app.route('/mobile')
+def mobilepredict():
+    return render_template("mobile_price_pred.html",formURL=formUrlMobile)
+
+
+@app.route('/result',methods = ['POST'])
+def predictedprice():
+    battery= float(request.form['battery'])
+    bluetooth= float(request.form['bluetooth'])
+    Clock= float(request.form['Clock'])
+    Dual= float(request.form['Dual'])
+    Front= float(request.form['Front'])
+    fourG= float(request.form['fourG'])
+    Internal= float(request.form['Internal'])
+    Weight= float(request.form['Weight'])
+    primaryCamera= float(request.form['primaryCamera'])
+    pxHeight= float(request.form['pxHeight'])
+    pxWidth= float(request.form['pxWidth'])
+    RAM= float(request.form['RAM'])
+    X=np.array([battery,bluetooth,Clock,Dual,Front,fourG,Internal,Weight,primaryCamera,pxHeight,pxWidth,RAM]).reshape(1,12)
+    print(X.shape)
+    print(classifier_mobile.predict(X))
+    predictedValue=str(classifier_mobile.predict(X)[0])
+    return "<h1>Price Range is : </h1>"+predictedValue
+
 
 
 @app.route('/customer-basket')
@@ -76,6 +110,8 @@ def damagedetect():
     response={"img":graph1_url}
 
     return jsonify(response)
+
+
 
 
 

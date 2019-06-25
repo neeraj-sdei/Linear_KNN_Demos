@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mobile Price Prediction</title>
+</head>
+
+<body>
+<p>In this problem we find out some relation between features of a mobile phone(eg:- Battery,Internal Memory etc) and its selling price.
+
+In this problem we are not predicting actual price but a price range indicating how high the price is which can be classified into :
+    target variable with value of 0(low cost), 1(medium cost), 2(high cost) and 3(very high cost).
+
+.</p>
+<form action = {{formURL}} method = "post">
+         <p>battery power in mAh:
+         <input type = "number" name = "battery" step="any" required /></p>
+        <p>Has bluetooth or not (0 or 1)
+         <input type = "number" name = "bluetooth" step="any" required/></p>
+        <p>Clock speed
+         <input type = "number" name = "Clock" step="any" required/></>
+          <p>Has Dual Sim or not (0 or 1)
+         <input type = "number" name = "Dual" step="any" required/></p>
+        <p>Enter Front camera MegaPixel
+         <input type = "number" name = "Front" step="any" required/></p>
+      <p>Has 4G or not (0 or 1)
+         <input type = "number" name = "fourG" step="any" required/></p>
+
+<p>Internal memory in GB
+        <input type = "number" name = "Internal" step="any" required/></p>
+
+<p>Weight of mobile phone
+         <input type = "number" name = "Weight" step="any" required/></p>
+
+<p>Primary Camera Megapixel
+      <input type = "number" name = "primaryCamera" step="any" required/></p>
+
+
+<p>Pixel Resolution height
+         <input type = "number" name = "pxHeight" step="any" required/></p>
+
+<p>Pixel Resolution width
+         <input type = "number" name = "pxWidth" step="any" required/></p>
+
+    <p>RAM
+         <input type = "number" name = "RAM" step="any" required/></p>
+
+
+
+         <p><input type = "submit" value = "submit" /></p>
+      </form>
+</body>
+</html>
